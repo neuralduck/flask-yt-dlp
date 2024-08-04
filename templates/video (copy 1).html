@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Downloader</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<h1>Yt downloader</h1>
+	<hr>
+	<form action="/download_video" method="post">
+		<a href="/video">Video</a>
+		<a href="/audio">Audio</a>
+		<br>
+
+		<label for="url">URL: </label>
+		<input type="url" id="url" name="url" placeholder="Paste URL here"required autofocus>
+		<br>
+
+		Video format:
+		<br>
+		<input type="radio" name="video_format" id='mp4' value="mp4" checked>
+		<label for='mp4'>mp4</label>
+		<br>
+		<input type="radio" name="video_format" id='mkv' value="mkv">
+		<label for='mkv'>mkv</label>
+		<br>
+		<input type="radio" name="video_format" id='avi' value="avi">
+		<label for='avi'>avi</label>
+
+		<br>
+		<button type="submit">Download</button>
+	</form>
+	{{result}}
+</body>
+</html>

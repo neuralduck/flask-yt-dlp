@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Downloader</title>
+	<style>
+		div {
+			border: solid black 1px;
+			font-size: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Yt downloader</h1>
+	<hr>
+	<form action="/download_audio" method="post">
+		<a href="/video">Video</a>
+		<a href="/audio">Audio</a>
+		<br>
+
+		<label for="url">URL: </label>
+		<input type="url" id="url" name="url" placeholder="Paste URL here"required autofocus>
+		<br>
+
+		Audio format:
+		<br>
+		<input type="radio" name="audio_format" id='mp3' value="mp3" checked>
+		<label for='mp3'>mp3</label>
+		<br>
+		<input type="radio" name="audio_format" id='flac' value="flac">
+		<label for='flac'>flac</label>
+		<br>
+		<input type="radio" name="audio_format" id='opus' value="opus">
+		<label for='opus'>opus</label>
+		
+
+		<br>
+		<button type="submit">Download</button>
+	</form>
+	{{result}}
+</body>
+</html>
